@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index 2</title>
+</head>
+<body>
+<script>
+    let objetoServidor = {
+        acesso : true,
+        login : "mundojs",
+    };
+    
+    let objetoServidor2 = {
+        erro : "Erro ao conectar no servidor"
+    };
+
+    function conexaoLogin(respostadoServidor) {
+        if(respostadoServidor.erro == null){
+            if(respostadoServidor.acesso){
+                console.log(`login: ${respostadoServidor.login}`);
+            }else {
+                console.log("acesso negado!");
+            }
+        }else{
+            console.log(respostadoServidor.erro); 
+        }
+
+    }
+
+    //condicionais
+function testarTamanho(valor){
+    if(valor > 15){
+        return  "maior";
+    }else if(valor < 3){
+        return "menor";
+    }else if(valor >= 3 && valor <= 15){
+        return "na faixa";
+    }
+}
+</script>
+</body>
+</html>
